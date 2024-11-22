@@ -63,8 +63,10 @@ const calculate = ()=>{
           <div className="mb-3"><TextField id="outlined-basic" label="Your height in metres" value={height} variant="outlined" className='w-100' name='height' onChange={(e)=>validate(e)}/></div>
           { isHeight==false && <p className='text-danger'>*Invalid input</p>}
 
-            <Button disabled={isWeight && isHeight ? false:true} variant="contained" style={{width:'150px'}} className='me-2 ' color='success' onClick={calculate}>Calculate</Button>
-            <Button variant="outlined" style={{width:'150px'}} className='ms-2 ' onClick={handleClear}>Clear</Button>
+            <div className='d-flex justify-content-between'>
+              <Button disabled={isWeight && isHeight ? false:true} variant="contained"  className='me-2 w-50' color='success' onClick={calculate}>Calculate</Button>
+              <Button variant="outlined" className='ms-2 w-50' onClick={handleClear}>Clear</Button>
+            </div>
 
         </div>
 
